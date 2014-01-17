@@ -1,0 +1,10 @@
+{
+  "name": "facebook-sdk",
+  "description": "Facebook Javascript SDK packaged for Meteor, with Handlebars helpers.",
+  "homepage": "https://github.com/hugesuccess/facebook-sdk",
+  "author": "Victor Venters (www.hugesuccess.meteor.com)",
+  "version": "0.0.01",
+  "git": "https://github.com/hugesuccess/facebook-sdk.git",
+  "packages": {
+  }
+}
