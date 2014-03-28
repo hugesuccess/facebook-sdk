@@ -3,6 +3,11 @@
 
 The Facebook Javascript SDK packaged for Meteor.js. Be sure to review the full [documentation](https://developers.facebook.com/docs/javascript) for a full description of the Facebook SDK and how to use it.
 
+Special Note on Blaze (March 27, 2014)
+-------------------------------------------
+
+Meteor 0.8.0 was released today and now handlebars is no longer a part of Meteor. A new templating engine, Spacebars, is taking its place. I am currently reviewing Spacebars, and if apporpriate, I will re-introduce Spacebars template helpers or Jade Mixins. The core functionality of facebook-sdk is not dependent on handlebars in any way, and still works perfectly fine. Just use HTML snippits from the Facebook documentation instead of the handlebars helpers. I will leave the handlebars in for the next couple of weeks. Then plan on updating the package and removing them.In the mean time I'm going to read up on these exciting new features of Meteor.
+
 How to Install
 ------------------
 
