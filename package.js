@@ -3,6 +3,6 @@ Package.describe({
 });
 
 Package.on_use(function(api) {
-    api.use(['jquery', 'handlebars']);
+    api.use(['jquery', 'ui', 'spacebars']);
     api.add_files(['sdk.js', 'helpers.js'], 'client');
 });
