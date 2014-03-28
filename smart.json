@@ -3,7 +3,7 @@
   "description": "Facebook Javascript SDK packaged for Meteor, now without Handlebars helpers!",
   "homepage": "https://github.com/hugesuccess/facebook-sdk",
   "author": "Victor Venters (www.hugesuccess.meteor.com)",
-  "version": "0.0.22",
+  "version": "0.0.3",
   "git": "https://github.com/hugesuccess/facebook-sdk.git",
   "packages": {
   }
