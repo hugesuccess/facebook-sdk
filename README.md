@@ -51,7 +51,7 @@ While the Social Plugins are great, "ain't nobody got time for all that" copy an
 
 Example Configuration Object
 ```javascript
-{colorsheme: "dark"}
+{colorscheme: "dark"}
 ```
 
 
