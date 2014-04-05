@@ -3,11 +3,6 @@
 
 The Facebook Javascript SDK packaged for Meteor.js. Be sure to review the full [documentation](https://developers.facebook.com/docs/javascript) for a full description of the Facebook SDK and how to use it.
 
-Special Note on Blaze (March 27, 2014)
--------------------------------------------
-
-Meteor 0.8.0 was released today and now handlebars is no longer a part of Meteor. A new templating engine, Spacebars, is taking its place. I am currently reviewing Spacebars, and if apporpriate, I will re-introduce Spacebars template helpers or Jade Mixins. The core functionality of facebook-sdk is not dependent on handlebars in any way, and still works perfectly fine. Just use HTML snippits from the Facebook documentation instead of the handlebars helpers. I will leave the handlebars in for the next couple of weeks. Then plan on updating the package and removing them.In the mean time I'm going to read up on these exciting new features of Meteor.
-
 How to Install
 ------------------
 
@@ -49,63 +44,55 @@ Along with calling FB methods directly from Javascript, you can also embed [Soci
 <div class="fb-like" data-href="{your-url}" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'
 ```
 
-Handlebars Helpers
+Template Helpers
 ------------------
 
-While the Social Plugins are great, "ain't nobody got time for all that" copy and pasting. Also included in this package are a set of handlebars helpers for social plugins. Use these helpers to quickly add standard facebook functionality to your application.
+While the Social Plugins are great, "ain't nobody got time for all that" copy and pasting. Also included in this package are a set of template helpers for social plugins. Use these helpers to quickly add standard facebook functionality to your application. Add a configuration object which maps to the configurable settings for each individual plugin. For example, if you would like to set the colorscheme attribute to "dark" be sure to pass a configuration object to the helper with the parameter colorscheme set to the string "dark". Be sure to visit the facebook [Social Plugin documentation](https://developers.facebook.com/docs/plugins/) for a full list of settings.
+
+Example Configuration Object
+```javascript
+{colorsheme: "dark"}
+```
+
 
 * [Like Button](https://developers.facebook.com/docs/plugins/like-button/)
 
-{{facebook-like *faces*}}
+{{> facebookLike config}}
  
-@param *faces* (Bool): True to show faces, false to remove them.
 
 * [Share Button](https://developers.facebook.com/docs/plugins/share-button/)
 
-{{facebook-share *url*}}
-@param *url* (String): The URL to share.
+{{> facebookShare config}}
 
 * [Embedded Posts](https://developers.facebook.com/docs/plugins/embedded-posts/)
 
-{{facebook-post *url*}}
+{{> facebookPost config}}
 
-@param *url* (String) : The URL of the facebook post, for example: https://www.facebook.com/FacebookDevelopers/posts/10151471074398553.
 
 * [Comments](https://developers.facebook.com/docs/plugins/comments/)
 
-{{facebook-comments *url*}}
+{{> facebookComments config}}
 
-@param *url* (String): The URL of the page to comment on.
 
 * [Send button](https://developers.facebook.com/docs/plugins/send-button/)
 
-{{facebook-send *url*}}
+{{> facebookSend config}}
 
-@param *url* (String): The URL of the page to share
 
 * [Follow button](https://developers.facebook.com/docs/plugins/follow-button/)
 
-{{facebook-follow *url*}}
+{{> facebookFollow config}}
 
-@param *url* (String): The URL of the facebook page to follow, for example: http://www.facebook.com/zuck
 
 * [Activity Feed](https://developers.facebook.com/docs/plugins/activity/)
 
-{{facebook-activity *domain*}}
+{{> facebookActivity config}}
 
-@param *domain* (String): The domain to display
 
 * [Recommendations Feed](https://developers.facebook.com/docs/plugins/recommendations/)
 
-{{facebook-recommendations *domain*}}
+{{> facebookRecommendations config}}
 
-@param *domain* (String): The domain to display
-
-* [Facepile](https://developers.facebook.com/docs/plugins/facepile)
-
-{{facebook-facepile *url*}}
-
-@param *url* (String): The URL of the page to display
 
 
 Facebook-SDK with Iron-Router
