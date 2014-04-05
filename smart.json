@@ -3,7 +3,7 @@
   "description": "Facebook Javascript SDK packaged for Meteor, with template helpers.",
   "homepage": "https://github.com/hugesuccess/facebook-sdk",
   "author": "Victor Venters (www.hugesuccess.meteor.com)",
-  "version": "0.0.41",
+  "version": "0.0.42",
   "git": "https://github.com/hugesuccess/facebook-sdk.git",
   "packages": {
   }
