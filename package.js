@@ -4,5 +4,5 @@ Package.describe({
 
 Package.on_use(function(api) {
     api.use(['jquery', 'spacebars', 'ui', 'templating', 'meteor', 'mongo-livedata', 'livedata', 'webapp']);
-    api.add_files(['sdk.js', 'helpers.js', 'templates.html'], 'client');
+    api.add_files(['sdk.js', 'templates.html'], 'client');
 });
